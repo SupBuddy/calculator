@@ -48,13 +48,23 @@ export default {
   flex-direction: column;
   align-items: center;
   .result {
-    font-size: 36px;
+    width: 1200px;
+    height: 250px;
+    line-height: 250px;
+    text-align: right;
+    font-size: 42px;
+    padding-right: 40px;
   }
   .enter {
-    font-size: 22px;
+    width: 1200px;
+    height: 180px;
+    line-height: 180px;
+    text-align: right;
+    font-size: 36px;
+    padding-right: 40px;
   }
   .list {
-    width: 320px;
+    width: 1200px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

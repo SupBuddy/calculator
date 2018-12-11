@@ -25,13 +25,17 @@ export default {
 
 <style lang="scss">
 .wrap {
-    border: 1px solid;
+    
     .key {
+        border-radius: 50% ;
+        background-color: #ddd;
         display: inline-block;
-        width: 70px;
-        height: 70px;
-        line-height: 70px;
+        width: 200px;
+        height: 200px;
+        line-height: 200px;
+        margin: 40px;
         text-align: center;
+        font-size: 36px;
     }
   }
 
