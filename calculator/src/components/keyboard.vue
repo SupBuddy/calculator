@@ -1,6 +1,6 @@
 <template>
-    <div class="page">
-        <div :value='value'></div>
+    <div class="wrap">
+        <div @click="getVal" :value="value" class="key">{{value}}</div>
     </div>
 </template>
 
@@ -10,12 +10,29 @@ export default {
     props: ['value'],
     data() {
         return {
-
+            
+        }
+    },
+    methods: {
+        getVal(e){
+            console.log(this.value)
+            let value = this.value;
+            this.$store.commit('calculate',value)
         }
     }
 }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
+.wrap {
+    border: 1px solid;
+    .key {
+        display: inline-block;
+        width: 70px;
+        height: 70px;
+        line-height: 70px;
+        text-align: center;
+    }
+  }
 
 </style>
