@@ -1,6 +1,6 @@
 <template>
     <div class="wrap">
-        <div @click="getVal" :value="value" class="key">{{value}}</div>
+        <p>test</p>
     </div>
 </template>
 
@@ -26,17 +26,6 @@ export default {
 <style lang="scss">
 .wrap {
     
-    .key {
-        border-radius: 50% ;
-        background-color: #ddd;
-        display: inline-block;
-        width: 200px;
-        height: 200px;
-        line-height: 200px;
-        margin: 40px;
-        text-align: center;
-        font-size: 60px;
-    }
-  }
+}
 
 </style>
