@@ -1,6 +1,11 @@
 <template>
     <div class="wrap">
-        <p>test</p>
+        <span @click="openContent">open</span>
+        <transition name="fade">
+            <div v-show="showContent" class="content">
+                <span @click="closeContent">close</span>
+            </div>
+        </transition>
     </div>
 </template>
 
@@ -10,14 +15,16 @@ export default {
     props: ['value'],
     data() {
         return {
-            
+            showContent: false
         }
     },
     methods: {
-        getVal(e){
-            console.log(this.value)
-            let value = this.value;
-            this.$store.commit('calculate',value)
+        openContent(){
+            this.showContent = true;
+        },
+        closeContent(){
+            console.log(this.showContent)
+            this.showContent = false;
         }
     }
 }
@@ -25,7 +32,30 @@ export default {
 
 <style lang="scss">
 .wrap {
-    
+    .content {
+        width: 100%;
+        height: 1200px;
+        margin: 0;
+        padding: 0;
+        background-color: #eee;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+    }
 }
+.fade-enter {
+    transform: translateY(1200px);
+}
+.fade-enter-active {
+    transition: all 0.5s;
+}
+.fade-leave-active {
+    transition: opacity 0.25s ease-out;
+}
+.fade-leave-to {
+    opacity: 0;
+}
+
+
 
 </style>
